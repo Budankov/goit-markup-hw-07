@@ -1,0 +1,905 @@
+:root {
+
+  /* ======================================== Text color ======================================== */
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #FFFFFF;
+  --logo-color: #000000;
+
+  /* ======================================== Beckground color ======================================== */
+  --secondary-bcg-color: #2F303A;
+  --teams-section-bcg-color: #F5F4FA;
+  --clients-color: #AFB1B8;
+  --footer-contact-color: rgba(255, 255, 255, 0.6);
+  --header-border-color: #ececec;
+  --portfolio-border-color: #eeeeee;
+  --btn-hover-accent: #188CE8;
+  --portfolio-bcg-accent-color: rgba(33, 150, 243, 0.9);
+  --network-firm-color: rgba(255, 255, 255, 0.1);
+  --service-subtitle-bcg: rgba(47, 48, 58, 0.8);
+  --backdrop-bcg-color: rgba(0, 0, 0, 0.2);
+  --input-border: 1px solid rgba(33, 33, 33, 0.2);
+
+  /* ======================================== Fonts ======================================== */
+  --primary-font: 'Roboto', sans-serif;
+  --logo-font: 'Raleway', sans-serif;
+
+  /* ======================================== Transition ======================================== */
+  --transition-duration: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* ======================================== Border-input ======================================== */
+  --input-border: 1px solid rgba(33, 33, 33, 0.2);
+  --placeholder-color: rgba(117, 117, 117, 0.5);
+  --black-icon-color: #212121;
+  --icon-send-color: #FFFFFF;
+
+}
+
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  font-style: normal;
+}
+
+/* ======================================== Container ======================================== */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+ /* ======================================== Section ======================================== */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+ /* ======================================== Visually Hidden ======================================== */
+.section-title.visually-hidden,
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ======================================== Header ======================================== */
+.page-header {
+  display: flex;
+  border-bottom: 1px solid var(--header-border-color);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo-primary,
+.logo-secondary {
+  font-family: var(--logo-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19; 
+  color: var(--logo-color);
+}
+
+.logo-accent {
+  color: var(--accent-color);
+}
+
+.logo-secondary {
+  color: var(--primary-white-color);
+}
+
+.site-nav {
+  margin-left: 93px;
+}
+
+.contact-nav {
+  margin-left: auto;
+}
+
+.site-nav,
+.contact-nav {
+  display: flex;
+}
+
+.site-nav .navigation-item:not(:last-child),
+.contact-nav .contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav .link,
+.contact-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  transition: color var(--transition-duration);
+}
+
+.navigation-item {
+  position: relative;
+}
+
+.site-nav .link.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
+.contact-item .link {
+  color: var(--primary-text-color);
+}
+
+.site-nav .link.current,
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contact-nav .link:hover,
+.contact-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.contact-item .mail,
+.contact-item .tel {
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+/* ======================================== //Header ======================================== */
+
+/* ======================================== Footer ======================================== */
+.footer {
+  padding: 60px 0;
+  background-color: var(--secondary-bcg-color);
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-contact .mail {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+.address .link {
+  color: var(--footer-contact-color);
+  transition: color var(--transition-duration);
+}
+
+.address {
+  margin-top: 20px;
+}
+
+.address .location {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: var(--primary-white-color);
+  transition: color var(--transition-duration);
+}
+
+.address .location:hover,
+.address .location:focus,
+.address .link:hover,
+.address .link:focus {
+  color: var(--accent-color);
+}
+
+.company-address {
+  width: 231px;
+  margin-right: 70px;
+}
+
+.company-socials .socials {
+  display: flex;
+}
+
+.network.firm {
+  background-color: var(--network-firm-color);
+}
+
+.firm>.icon-network {
+  fill: var(--primary-white-color);
+}
+
+.join {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--primary-white-color);
+  text-transform: uppercase;
+  line-height: 1.17;
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.socials .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.network {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--primary-text-color);
+  transition: background-color var(--transition-duration);
+}
+
+.icon-network {
+  fill: var(--primary-icon-color);
+}
+
+.network:hover,
+.network:focus {
+  background-color: var(--accent-color);
+  transition: background-color var(--transition-duration);
+}
+
+.network:hover .icon-network,
+.network:focus .icon-network {
+  fill: var(--primary-white-color);
+}
+
+.subscribe {
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.subscribe-field {
+  display: flex;
+  flex-direction: column;
+  width: 358px;
+}
+
+.subscribe-input {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  padding: 15px 0px 15px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: border-color var(--transition-duration);
+  color: var(--primary-white-color);
+}
+
+.subscribe-input::placeholder {
+  line-height: 1.25;
+  color: var(--footer-contact-color);
+}
+
+.button.subscribe-button {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  align-items: center;
+  margin-left: 12px;
+  margin-top: auto;
+}
+
+.icon-send {
+  margin-left: 10px;
+  fill: var(--icon-send-color);
+}
+/* ======================================== //Footer ======================================== */
+
+/* ======================================== Main block ======================================== */
+/* ======================================== Hero ======================================== */
+.hero {
+  height: 600px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page/hero.jpg);  background-color: var(--secondary-bcg-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero-title {
+  width: 696px;
+  margin: 0 auto 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  cursor: pointer;
+  outline: none;
+  transition: background-color var(--transition-duration);
+}
+
+.button:focus,
+.button:hover {
+  background-color: var(--btn-hover-accent);
+}
+
+/* Чисто от себя декоративный эффект нажатия */
+.button:active {
+  opacity: 0.8;
+  transform: scale(.95);
+}
+/* ======================================== //Hero ======================================== */
+
+/* ======================================== Features ======================================== */
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--title-text-color);
+  margin-bottom: 50px;
+}
+
+.features {
+  display: flex;
+}
+
+.service-item:not(:last-child),
+.feature-item:not(:last-child),
+.team-member:not(:last-child) {
+  margin-right: 30px;
+}
+
+.feature-item {
+  width: 270px;
+}
+
+.feature-bcg {
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--teams-section-bcg-color);
+}
+
+.feature-title {
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+  margin-bottom: 10px;
+}
+/* ======================================== //Features ======================================== */
+
+/* ======================================== Services ======================================== */
+.activity {
+  padding-top: 0;
+}
+
+.services {
+  display: flex;
+}
+
+.service-item {
+  width: 370px;
+}
+
+.service-image {
+  position: relative;
+}
+
+.service-block {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  background-color: var(--service-subtitle-bcg);
+}
+
+.service-titile {
+  color: var(--primary-white-color);
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* ======================================== //Services ======================================== */
+
+/* ======================================== Teams ======================================== */
+.teams {
+  background-color: var(--teams-section-bcg-color);
+}
+
+.team {
+  display: flex;
+}
+
+.team-member {
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.member-info {
+  padding: 30px 0 0;
+}
+
+.member-name {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  margin-bottom: 10px;
+}
+
+.member-position {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.team .icon-network {
+  fill: var(--clients-color);
+}
+.team .company-socials {
+  margin: 16px 32px 30px 32px;
+}
+/* ======================================== //Teams ======================================== */
+
+/* ======================================== Clients ======================================== */
+.clients-list {
+  display: flex;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--clients-color);
+  border-radius: 4px;
+  transition: border-color var(--transition-duration);
+}
+
+.client-logo {
+  fill: var(--clients-color);
+  transition: fill var(--transition-duration);
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-color);
+}
+
+.client-link:hover .client-logo,
+.client-link:focus .client-logo {
+  fill: var(--accent-color);
+}
+/* ======================================== Clients ======================================== */
+/* ======================================== //Main block ======================================== */
+
+/* ======================================== Portfolio ======================================== */
+/* ======================================== Filters list ======================================== */
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  background-color: var(--teams-section-bcg-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+  transition: background-color var(--transition-duration);
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+/* ======================================== //Filters list ======================================== */
+
+/* ======================================== Portfolio list ======================================== */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.portfolio>.project {
+  flex-basis: calc((100% - 30px * 3) / 3);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.project-card {
+  display: block;
+  transition: box-shadow var(--transition-duration);
+}
+
+.project-card:hover,
+.project-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-overlay {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: var(--portfolio-bcg-accent-color);
+  overflow: auto;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform var(--transition-duration), opacity var(--transition-duration);
+}
+
+.project-description {
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--primary-white-color);
+}
+
+.project-card:hover .project-overlay,
+.project-card:focus .project-overlay {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.project-info {
+  padding: 20px 24px;
+  border-left: 1px solid var(--portfolio-border-color);
+  border-right: 1px solid var(--portfolio-border-color);
+  border-bottom: 1px solid var(--portfolio-border-color);
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+  margin-bottom: 4px;
+}
+
+.project-caption {
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--primary-text-color);
+}
+/* ======================================== //Portfolio list ======================================== */
+/* ======================================== //Portfolio ======================================== */
+
+/* ======================================== Modal ======================================== */
+/* ======================================== Modal Windows ======================================== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-bcg-color);
+  opacity: 1;
+  transition: opacity var(--transition-duration), visability var(--transition-duration);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+  transition: visibility var(--transition-duration), transform var(--transition-duration);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform var(--transition-duration);
+  min-width: 528px;
+  min-height: 581px;
+  padding: 40px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.btn-close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #0000001a;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition-duration);
+}
+
+.btn-close-modal:active {
+  opacity: 0.8;
+  transform: scale(.95);
+}
+
+.btn-close-modal:focus,
+.btn-close-modal:hover {
+  border-color: var(--accent-color);
+}
+
+.btn-close-modal:focus .icon-close,
+.btn-close-modal:hover .icon-close {
+  fill: var(--accent-color);
+}
+/* ======================================== //Modal Windows ======================================== */
+
+/* ======================================== Modal Form ======================================== */
+.modal-call {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  width: 448px;
+  margin: 0 auto 10px;
+  position: relative;
+}
+
+.form-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.form-input {
+  outline: none;
+  border: var(--input-border);
+  height: 40px;
+  padding: 11px 0px 11px 42px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color var(--transition-duration);
+}
+
+.form-icon {
+  display: inline-block;
+  position: absolute;
+  top: 29px;
+  left: 12px;
+  transition: fill var(--transition-duration);
+}
+
+.form-field:focus-within>.form-icon,
+.form-field:hover>.form-icon {
+  fill: var(--accent-color);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-input:hover,
+.form-textarea:hover {
+  border-color: var(--accent-color);
+}
+
+.form-label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+}
+
+.form-field.comment {
+  margin-bottom: 20px;
+}
+
+.form-textarea {
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+  outline: none;
+  border: var(--input-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color var(--transition-duration);
+}
+
+.form-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: var(--placeholder-color);
+}
+
+.form-field.policy {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.policy .form-input {
+  margin-right: 7px;
+}
+
+.policy .form-label {
+  display: block;
+  margin-bottom: 0px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.checkbox-link {
+  color: var(--accent-color);
+}
+
+.button.send {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  padding: 10px 55px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkbox-icon {
+  margin-right: 8px;
+  border: 2px solid var(--black-icon-color);
+  border-radius: 2px;
+  transition: transform var(--transition-duration), background-color var(--transition-duration), border-color var(--transition-duration);
+  cursor: pointer;
+}
+
+.checkbox:checked+.checkbox-icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  transform: scale(1.2);
+}
+
+.checkbox:focus+.checkbox-icon {
+  outline: auto 1px;
+  outline-color: var(--accent-color);
+}
+/* ======================================== //Modal Form======================================== */
+/* ======================================== //Modal ======================================== */
